@@ -42,12 +42,6 @@ h1, h2, h3, h4, p {
   align-items: center;
 }
 
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .img {
   max-width: 100%;
 }

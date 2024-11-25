@@ -21,7 +21,7 @@ a:visited {
   color: #313567;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   color: #313567;
 }
 
@@ -34,6 +34,12 @@ h1, h2, h3, p {
   .main {
     max-width: 1800px;
   }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img {
@@ -63,7 +69,7 @@ h1, h2, h3, p {
   height: 92px;
   margin: 0 auto;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .header__container {
   justify-content: space-between;
@@ -194,6 +200,55 @@ h1, h2, h3, p {
   }
 }
 
+.toggle {
+  background-color: #F5FBFF;
+  height: 56px;
+  display: flex;
+  border-radius: 56px;
+}
+.toggle__option {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+.toggle__option--selected::after {
+  content: "";
+  position: absolute;
+  border-radius: 56px;
+  z-index: 0;
+  top: 0;
+  width: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #313567;
+  animation: toggleAnimation 200ms ease-in-out 1;
+}
+.toggle__text {
+  color: #313567;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 210ms ease;
+}
+.toggle__option--selected .toggle__text {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+@keyframes toggleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .button {
   height: 56px;
   border-style: none;
@@ -378,6 +433,7 @@ h1, h2, h3, p {
   }
 }
 .section__list {
+  list-style: none;
   margin-top: 40px;
   margin-left: 40px;
 }
@@ -387,11 +443,29 @@ h1, h2, h3, p {
   font-size: 1.125rem;
   color: #313567;
   font-weight: 500;
-  line-height: 2.8125rem;
+  line-height: 1.6875rem;
   transition: all 200ms ease-in-out;
+}
+.section__item:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+.section__item::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-200%);
+  background: url("../img/bullet-point-circle.svg") center no-repeat;
 }
 .section__item:hover {
   color: #A26CFF;
+}
+.section__item:hover::before {
+  content: "";
+  background: url("../img/bullet-point-triangle.svg") center no-repeat;
 }
 .section__headline--s {
   font-size: 2rem;
@@ -400,27 +474,27 @@ h1, h2, h3, p {
 
 .highlight {
   background-color: #FFF1D2;
-  border-radius: 10px;
-  padding: 0 10px;
+  border-radius: 15px;
+  padding: 0 15px;
 }
 
 .hero-section {
-  background: url("../img/intro__banner.png") center no-repeat;
+  background: url("../img/intro__banner.svg") center no-repeat;
   height: 895px;
 }
 @media (max-width: 768px) {
   .hero-section {
-    background: url("../img/intro__banner_mobile.png") center no-repeat;
+    background: url("../img/intro__banner_mobile.svg") center no-repeat;
     height: 780px;
   }
 }
 .hero-section--subpage {
-  background: url("../img/sub__banner.png") center no-repeat;
+  background: url("../img/sub__banner.svg") center no-repeat;
   height: 478px;
 }
 @media (max-width: 768px) {
   .hero-section--subpage {
-    background: url("../img/sub__banner_mobile.png") center no-repeat;
+    background: url("../img/sub__banner_mobile.svg") center no-repeat;
   }
 }
 .hero-section--subpage .container {
@@ -525,7 +599,7 @@ h1, h2, h3, p {
   height: 92px;
   background-color: #F5FBFF;
   padding: 0 24px;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: all 200ms ease-in-out;
 }
 .services-section__plate:hover {
@@ -576,7 +650,7 @@ h1, h2, h3, p {
 }
 .why-us-section__block {
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #F5FBFF;
   padding: 24px;
   transition: all 200ms ease-in-out;
@@ -631,7 +705,7 @@ h1, h2, h3, p {
   background-color: #F5FBFF;
   margin: 0 auto;
   max-width: 95%;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 @media (min-width: 2000px) {
   .footer {
@@ -758,12 +832,15 @@ h1, h2, h3, p {
   margin-right: 20px;
   transition: all 200ms ease-in-out;
 }
+.footer__text-block {
+  margin-top: 40px;
+}
 
 .step-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .step-section:not(:first-child) {
   margin-top: 20px;

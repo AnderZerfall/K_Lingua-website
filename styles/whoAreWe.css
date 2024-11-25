@@ -21,7 +21,7 @@ a:visited {
   color: #313567;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   color: #313567;
 }
 
@@ -37,12 +37,6 @@ h1, h2, h3, p {
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
   display: flex;
   justify-content: center;
   align-items: center;
