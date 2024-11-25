@@ -1,0 +1,62 @@
+@import 'generalStyles.scss';
+
+.team-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__headline--center {
+        text-align: center;
+        margin-bottom: $section-margin-s;
+    }
+
+    &__container {
+        align-items: center;
+
+        @media (max-width: 1099px) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &--2 {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__text-block {
+        margin-bottom: $headline-margin;
+
+        @media (max-width: 1099px) {
+            text-align: left;
+        }
+    }
+}
+
+.contact-section {
+
+    background: url('../img/contact-section__bg.png') center no-repeat;
+    height: $text-block;
+
+    @media (max-width: 1099px) {
+        background: url('../img/contact-section__bg_m.png') center no-repeat;
+    }
+
+    &__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text-block {
+        text-align: center;
+        width: $intro-text-block;
+
+        @media (max-width: 1099px) {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        margin-top: $headline-margin;
+    }
+}

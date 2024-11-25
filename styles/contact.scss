@@ -1,0 +1,130 @@
+@import 'generalStyles.scss';
+
+.contact-section {
+    background-color: $block-bg;
+
+    &:not(:first-child) {
+        margin-top: 0;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $section-margin;
+
+        @media (max-width: 1400px) {
+            gap: $section-margin-t;
+        }
+
+        @media (max-width: 1099px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__headline {
+        font-size: $headline-size-s;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        
+        &:not(:last-child) {
+            margin-bottom: $text-size;
+        }
+    }
+
+    &__icon {
+        margin-right: $gap;
+    }
+
+    &__info-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $headline-margin;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__info-block &__text-block, &__note {
+        grid-column: 1 / 3;
+
+        @media (max-width: 768px) {
+            grid-column: 1;
+        }
+    }
+
+    &__note {
+        box-sizing: border-box;
+        background-color: white;
+        padding: $gap;
+        border-radius: $round-size;
+    }
+}
+
+.input {
+    background-color: $block-bg;
+    color: $text-color;
+    font-size: $text-size;
+    font-family: $text-font;
+    padding: 0 $gap;
+    border-radius: $round-size;
+    height: $button-size;
+    border-style: none;
+
+    &::placeholder {
+        color: $text-color;
+        opacity: 40%;
+        font-size: $text-size;
+        font-family: $text-font;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--message {
+        padding: $gap;
+        height: 200px;
+        resize: none;
+    }
+}
+
+.form {
+    background-color: white;
+
+    &__container {
+        box-sizing: border-box;
+        padding: $headline-margin;
+        border-radius: $round-size;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $gap;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+            padding: $gap;
+        }
+    }
+
+    &__button-wrap, .input--message {
+        grid-column: 1 / 3;
+
+        @media (max-width: 768px) {
+            grid-column: 1;
+        }
+    }
+
+    &__button-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,75 @@
+@import 'generalStyles.scss';
+
+.benefit-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: $round-size;
+    
+    &:not(:first-child) {
+        margin-top: $gap;
+    }
+
+    &--second {
+        background-color: $secondary-color-v;
+    }
+
+    &--fourth {
+        background-color: $secondary-color-y;
+    }
+
+    
+
+    &__container {
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: $section-margin-s 0;
+    }
+
+    &__headline {
+        width: $intro-text-block;
+    }
+
+    &__benefit {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        @media (max-width: 1099px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &--second &__benefit, &--fourth &__benefit{
+        flex-direction: row-reverse;
+    }
+
+    &__step {
+        margin-bottom: $section-margin-t;
+    }
+
+    &__text-block {
+        @media (max-width: 1099px) {
+            text-align: left;
+        }
+    }
+
+    &__step-text {
+        display: flex;
+        align-items: center;
+        font-family: $text-font;
+        font-size: $text-size;
+        font-weight: 500;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 1.5px;
+            border-radius: 2px;
+            background-color: $text-color;
+            margin-left: $gap;
+        }
+    }
+}
