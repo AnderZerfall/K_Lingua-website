@@ -34,11 +34,11 @@
 
 .contact-section {
 
-    background: url('../img/contact-section__bg.png') center no-repeat;
+    background: url('../img/contact-section__bg.svg') center no-repeat;
     height: $text-block;
 
     @media (max-width: 1099px) {
-        background: url('../img/contact-section__bg_m.png') center no-repeat;
+        background: url('../img/contact-section__bg_m.svg') center no-repeat;
     }
 
     &__container {
