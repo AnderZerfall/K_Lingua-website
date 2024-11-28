@@ -144,15 +144,17 @@
                     </div>
                 </div>
                 <div class="contact-section__form-block">
-                    <form action="sendForm.php" method="POST" class="contact-section__form form" id="contact-form">
+                    <form method="POST" action="https://api.web3forms.com/submit" class="contact-section__form form" id="contact-form">
                         <div class="form__container">
                             <input class="form__input input" type="text" name="firstName" placeholder="First name" required>
                             <input class="form__input input" type="text" name="secondName" placeholder="Second name" required>
                             <input class="form__input input" type="tel" name="phone" placeholder="Phone" required>
                             <input class="form__input input" type="email" name="email" placeholder="Email" required>
                             <textarea class="form__input input input--message" name="message" id="message" placeholder="Hello! I'd like to contact you!" required></textarea>
+                            <input type="hidden" name="access_key" value="cd67d236-1f9a-4fc6-bb77-9296665bd419">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                             <div class="form__button-wrap">
-                                <button class="form__button button button--primary">Contact</button>
+                                <button class="form__button button button--primary" type="submit">Contact</button>
                             </div>
                         </div>
                     </form>
@@ -202,6 +204,5 @@
         </div>
     </footer>
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/prices.js" defer></script>
 </body>
 </html>
