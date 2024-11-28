@@ -1,17 +1,25 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "anderzerfall@gmail.com"; // Replace with your email address
-    $subject = "Form Submission";
-    $message = "";
+    // Capture the sender's email from the form
     $senderEmail = $_POST['email'];
     
-    foreach ($_POST as $key => $value) {
-        $message .= "$key: $value\n";
-    }
-
-    $headers = "From: $senderEmail"; // Replace with your sender email address
-
-    if (mail($to, $subject, $message, $headers)) {
+    // Other form data
+    $name = $_POST['firstName'];
+    $message = $_POST['message'];
+    
+    // Recipient email
+    $to = "anderzerfall@gmail.com"; // Replace with your email address
+    $subject = "Form Submission";
+    
+    // Compose the email
+    $emailMessage = "Name: $name\n";
+    $emailMessage .= "Email: $senderEmail\n";
+    $emailMessage .= "Message:\n$message\n";
+    
+    $headers = "From: $senderEmail"; // Use the sender's email in the 'From' header
+    
+    // Send the email
+    if (mail($to, $subject, $emailMessage, $headers)) {
         echo "Email sent successfully!";
     } else {
         echo "Failed to send email.";
