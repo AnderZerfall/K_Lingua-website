@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.11 18.02">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .2em;
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #313567;
+      }
+
+      .cls-5 {
+        letter-spacing: .15em;
+      }
+
+      .cls-3 {
+        font-family: Alexandria-Regular, Alexandria;
+        font-size: 1.3px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-4 {
+        font-family: Quicksand-SemiBold, Quicksand;
+        font-size: 4px;
+        font-variation-settings: 'wght' 600;
+        font-weight: 600;
+        letter-spacing: .07em;
+        stroke: #313567;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .1px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-2" d="m6.78,4.66c.09.17.23.25.42.25.08,0,.15-.02.22-.06L14.9.91c.12-.06.2-.15.23-.28.04-.12.03-.24-.04-.36-.06-.12-.15-.2-.28-.23-.12-.04-.24-.03-.36.04l-4.84,2.55V.48c0-.13-.05-.24-.14-.34-.09-.09-.2-.14-.34-.14s-.24.05-.34.14c-.09.09-.13.21-.13.34v2.65l-1,.53V.57c0-.13-.05-.24-.14-.34-.09-.09-.21-.14-.34-.14s-.24.05-.34.14c-.09.09-.14.2-.14.34v3.84c0,.09.01.17.06.25h0Zm4.6.27l3.53-1.86c.12-.06.2-.16.23-.28.04-.13.03-.25-.04-.36-.06-.12-.15-.2-.28-.23-.12-.04-.24-.03-.36.03l-7.49,3.94c-.2.11-.24.27-.25.49v1.91c0,.13.04.24.13.34.09.09.2.14.34.14s.24-.05.34-.14c.09-.09.14-.2.14-.34v-1.69l2.78-1.46.02.03.03.02,3.92,3.49c.08.06.18.1.29.1.16,0,.29-.06.38-.19.08-.11.11-.22.09-.35-.02-.13-.08-.23-.18-.31l-3.61-3.26Z"/>
+      <text class="cls-4" transform="translate(.05 14.61)"><tspan x="0" y="0">K-LINGUA</tspan></text>
+      <text class="cls-3" transform="translate(.37 17.28)"><tspan class="cls-1" x="0" y="0">AL</tspan><tspan class="cls-5" x="2.18" y="0">WA</tspan><tspan class="cls-1" x="4.92" y="0">YS A STEP AHEAD</tspan></text>
+    </g>
+  </g>
+</svg>

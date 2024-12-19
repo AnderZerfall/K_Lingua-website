@@ -5,6 +5,10 @@
     flex-direction: column;
     justify-content: center;
     border-radius: $round-size;
+
+    &:last-child {
+        margin-bottom: $gap;
+    }
     
     &:not(:first-child) {
         margin-top: $gap;
@@ -41,6 +45,7 @@
 
         @media (max-width: 1099px) {
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 
@@ -54,7 +59,7 @@
 
     &__text-block {
         @media (max-width: 1099px) {
-            text-align: left;
+            text-align: center;
         }
     }
 

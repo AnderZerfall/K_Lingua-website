@@ -29,6 +29,47 @@ h1, h2, h3, h4, p {
     color: $text-color;
 }
 
+@keyframes animateBlock {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animateText {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: animateBlock 1s forwards;
+}
+
+.animatedText {
+    animation: animateText 1s forwards;
+}
+
+.hero-section__headline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-section__word {
+    display: block;
+    opacity: 0;
+    transform: translateY(-150%);
+}
 
 .main {
     max-width: 95%;
@@ -46,8 +87,13 @@ h1, h2, h3, h4, p {
     align-items: center;
 }
 
-.img {
+.image {
     max-width: 100%;
+}
+
+.img {
+    width: 100%;
+    height: auto;
 }
 
 .container {
@@ -57,7 +103,7 @@ h1, h2, h3, h4, p {
     display: flex;
     flex-wrap: wrap;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1440px) {
         width: 90%;
     }
 }
@@ -74,6 +120,10 @@ h1, h2, h3, h4, p {
     margin: 0 auto;
     width: 100%;
     border-radius: $round-size;
+
+    &__logo {
+        max-width: 148px;
+    }
 
     &__container {
         justify-content: space-between;
@@ -430,12 +480,14 @@ h1, h2, h3, h4, p {
 
 .section {
     position: relative;
+    opacity: 0;
+    transform: translateY(-50%);
 
     &__text-block {
-        width: $text-block;
+        max-width: $text-block;
 
         @media (max-width: 1099px) {
-            width: 100%;
+            max-width: 100%;
             text-align: center;
         }
     }
@@ -543,6 +595,7 @@ h1, h2, h3, h4, p {
 .hero-section {
     background: url('../img/intro__banner.svg') center no-repeat;
     height: 895px;
+    border-radius: $round-size;
 
     @media (max-width: 768px) {
         background: url('../img/intro__banner_mobile.svg') center no-repeat;
@@ -589,12 +642,12 @@ h1, h2, h3, h4, p {
     &__text {
         display: block;
         width: $intro-text-block;
-        margin: $headline-margin 0;
 
         @media (max-width: 768px) {
             width: 100%;
-            margin: 0 0 $headline-margin 0;
         }
+        opacity: 0;
+        transform: translateY(-50%);
     }
 
     &__container {
@@ -606,9 +659,19 @@ h1, h2, h3, h4, p {
             justify-content: flex-start;
         }
     }
+
+    &__button {
+        margin-top: $headline-margin;
+        opacity: 0;
+        transform: translateY(-50%);
+    }
 }
 
 .who-are-we-section {
+    .section__headline {
+        white-space: nowrap;
+    }
+
     &__container {
         align-items: center;
 
@@ -621,6 +684,14 @@ h1, h2, h3, h4, p {
     &__text-block {
         @media (max-width: 1099px) {
             margin-bottom: $headline-margin;
+        }
+    }
+
+    &__image {
+        margin-left: $section-margin-s;
+
+        @media (max-width: 1099px) {
+            margin-left: 0;
         }
     }
 }
@@ -693,22 +764,17 @@ h1, h2, h3, h4, p {
     }
 
     &__text-block {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        gap: $section-margin-m;
+        align-items: center;
 
-        @media (max-width: 1280px) {
-            justify-content: center;
-            flex-wrap: wrap;
+        @media (max-width: 1099px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
             margin-bottom: $headline-margin;
         }
-    }
-
-    &__text-block &__text {
-        width: $text-block;
-    }
-    &__text-block &__headline {
-        width: $text-block;
     }
 
     &__grid {
@@ -737,6 +803,10 @@ h1, h2, h3, h4, p {
         font-size: $subheadline-text;
         line-height: calc($subheadline-text * 1.5);
         margin-top: $headline-margin;
+    }
+
+    .icon {
+        width: 92px;
     }
 }
 
@@ -803,6 +873,8 @@ h1, h2, h3, h4, p {
     }
 
     &__logo {
+        max-width: 400px;
+
         @media (max-width: 1099px) {
             margin-bottom: $headline-margin;
         }
@@ -813,13 +885,14 @@ h1, h2, h3, h4, p {
         justify-content: space-between;
 
         @media (max-width: 1099px) {
-            margin-bottom: $headline-margin;
+            margin-bottom: 0;
             width: 100%;
         }
 
         @media (max-width: 450px) {
             display: none;
         }
+
     }
 
     &__info {
@@ -916,5 +989,9 @@ h1, h2, h3, h4, p {
 
     &__text-block {
         margin-top: $headline-margin;
+
+        @media (max-width: 1099px) {
+            margin-top: 0;
+        }
     }
 }
